@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8 card" />
+    <meta http-equiv="X-UA-Compatible" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      src="https://kit.fontawesome.com/e3870bf88a.js
+      crossorigin="
+      anonymous
+    ></script>
+    <script src="https://unpkg.com/ionicons@[250px].10-0/dist/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Beau+Rivage&family=Poppins:ital,wght@1,400;1,600&family=Trispace:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <!-- body -->
+  <body class="bg-[#F6FBFE]">
+    <nav
+      class="bg-[#F8F8F8] md:px-[10%] md:py-3 py-4 p[250px] md:flex md:items-center md:justify-between"
+    >
+      <div
+        class="flex justify-between items-center md:pl-1 pl-6 md:pr-0 pr-6 md:relative"
+      >
+        <span class="">
+          <img
+            src="images/Frame 1421.png"
+            class="cursor-pointer md:w-auto w-[150px] md:ml-0 ml-3"
+            alt="logo"
+          />
+        </span>
+        <!-- <i class="fa-solid fa-bars mt-2 cursor-pointer text-3xl text-[#1D8AEC] mr-6 md:hidden block"
+               onclick="onToggleMenu(this)" name="menu"></i> -->
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          name="menu"
+          class="text-[40px] text-[#1D8AEC] mr-2 font-bold cursor-pointer md:hidden block"
+        ></ion-icon>
+      </div>
+
+      <ul
+        class="nav-links md:flex md:items-end md:static md:z-[1] z-[1] absolute md:min-h-fit min-h-[40vh] left-[-100%] top-[[250px]%] md:pt-0 pt-14 bg-[#F8F8F8] w-full md:w-auto md:py-0 py-4 md:px-0 px-[12px] ease-in duration-500 md:bg-opacity-0 bg-opacity-100"
+      >
+        <li class="mx-6 md:my-1 md:mt-auto mt-0">
+          <a
+            class="capitalize text-lg hover:text-[#1D8AEC] font-bold text-[#000000] duration-300 active"
+            id="act"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize hover:text-black text-lg font-bold text-[#1D8AEC] duration-300"
+            href="#"
+            >Insights</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg text-black font-bold hover:text-[#1D8AEC] duration-300"
+            href="doctors.html"
+            >Doctors</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg font-bold text-black hover:text-[#1D8AEC] duration-300"
+            href="#"
+            >Departments</a
+          >
+        </li>
+        <button
+          class="bg-[#1D8AEC] md:py-2 py-3 md:px-6 px-9 rounded-lg font-bold capitalize md:ml-12 ml-6 md:mt-1 my-4 md:my-0 md:mx-0 m[250px] text-white hover:text-black duration-300"
+        >
+          <a href="appointment.html">Book Appointment</a>
+        </button>
+      </ul>
+    </nav>
+    <script src="main.js"></script>
+
+    <!-- article -->
+    <article class="md:h-[800px] h-[1500px] w-full overflow-hidden">
+      <div
+        class="md:h-[20%] h-[10%] w-full flex flex-col justify-center items-center"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+      >
+        <h2 class="md:text-lg text-base capitalize font-semibold md:mt-0 mt-3">
+          latest news
+        </h2>
+        <h1 class="text-[#1D8AEC] md:text-4xl text-lg font-semibold">
+          Latest Post & Articles
+        </h1>
+      </div>
+      <!-- sub-article -->
+      <div class="md:h-[80%] h-[90%] md:w-full">
+        <!-- 2nd div -->
+        <div
+          class="md:h-[80%] h-full md:w-[80%] w-[80%] md:ml-[10%] ml-[10%] flex md:flex-row flex-col md:items-center md:justify-between rounded-md"
+        >
+          <!-- first -->
+          <div
+            class="md:h-full h-[30%] w-full md:w-[30%] rounded-md flex flex-col bg-white shadow-md md:my-auto my-4"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <div
+              class="h-1/2 md:w-full relative rounded-md"
+              style="background-image: url('images/Rectangle\ 893.png')"
+            >
+              <div class=""></div>
+            </div>
+            <div class="h-1/2 md:w-full md:px-10 px-6">
+              <h2
+                class="text-left text-[#1D8AEC] font-bold md:mt-4 mt-2 md:text-base text-sm"
+              >
+                EdesCare Services Are Ready <br />
+                To Serve Your Family
+              </h2>
+              <p class="text-gray-400 text-justify md:mb-12 mb-4 text-sm">
+                At EdesCare, we are dedicated to providing the highest quality
+                healthcare services to our community.
+              </p>
+              <span class=""
+                ><a href="#" class="text-[#1D8AEC] font-semibold">Read More</a>
+                <span class="mt-4">
+                  <i
+                    class="fa-solid fa-share-nodes float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    6</i
+                  >
+                  <i
+                    class="fa-regular fa-comment float-right text-xs mx-2 cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    10</i
+                  >
+                  <i
+                    class="fa-regular fa-heart float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    34</i
+                  >
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- second -->
+          <div
+            class="md:h-full h-[30%] md:w-[30%] w-full bg-white rounded-md shadow-md md:my-auto my-6"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <div
+              class="h-1/2 md:w-full relative rounded-md"
+              style="
+                background-image: url('images/Rectangle\ 894.png');
+                object-fit: cover;
+              "
+            >
+              <div class=""></div>
+            </div>
+            <div class="h-1/2 md:w-full md:px-10 px-6">
+              <h2
+                class="text-left text-[#1D8AEC] font-bold md:mt-4 mt-2 md:text-base text-sm"
+              >
+                EdesCare Services Are Ready <br />
+                To Serve Your Family
+              </h2>
+              <p class="text-gray-400 text-sm text-justify md:mb-8 card mb-4">
+                At EdesCare, we are dedicated to providing the highest quality
+                healthcare services to our community. Our mission is to improve
+                the health and well-being of our patients
+              </p>
+              <span class=""
+                ><a href="#" class="text-[#1D8AEC] font-semibold">Read More</a>
+                <span class="mt-4">
+                  <i
+                    class="fa-solid fa-share-nodes float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    6</i
+                  >
+                  <i
+                    class="fa-regular fa-comment float-right text-xs mx-2 cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    10</i
+                  >
+                  <i
+                    class="fa-regular fa-heart float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    34</i
+                  >
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- third -->
+          <div
+            class="md:h-full h-[30%] md:w-[30%] w-full md:my-auto my-4 bg-[#ffffff] rounded-md shadow-md"
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <div
+              class="h-1/2 md:w-full relative rounded-md"
+              style="
+                background-image: url('images/Rectangle\ 895.png');
+                object-fit: contain;
+              "
+            >
+              <div class=""></div>
+            </div>
+            <div class="h-1/2 md:w-full md:px-10 px-6">
+              <h2
+                class="text-left text-[#1D8AEC] font-bold md:mt-4 mt-2 md:text-base text-sm"
+              >
+                EdesCare Services Are Ready <br />
+                To Serve Your Family
+              </h2>
+              <p class="text-gray-400 text-sm text-justify md:mb-4 mb-1">
+                At EdesCare, we are dedicated to providing the highest quality
+                healthcare services to our community. Our mission is to improve
+                the health and well-being of our patients through compassionate
+                care.
+              </p>
+              <span class=""
+                ><a href="#" class="text-[#1D8AEC] font-semibold">Read More</a>
+                <span class="mt-4">
+                  <i
+                    class="fa-solid fa-share-nodes float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    6</i
+                  >
+                  <i
+                    class="fa-regular fa-comment float-right text-xs mx-2 cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    10</i
+                  >
+                  <i
+                    class="fa-regular fa-heart float-right text-xs cursor-pointer mt-1"
+                    style="color: #acb3be"
+                  >
+                    34</i
+                  >
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- features  for big screens-->
+    <section
+      class="md:h-[600px] w-full md:flex flex-col hidden bg-[#F8F8F8] overflow-hidden"
+    >
+      <div class="h-[20%] w-full flex flex-row items-end justify-around">
+        <h1 class="text-[#1D8AEC] text-4xl font-semibold tracking-wide">
+          Why You Should Trust Us
+        </h1>
+        <p class="text-black text-base text-justify">
+          Our vision is to be a trusted healthcare institution recognized for
+          our <br />
+          commitment to excellence, innovation, and patient-centered care. We
+          aim to <br />
+          be the hospital of choice for patients and the employer of choice for
+          healthcare professionals.
+        </p>
+      </div>
+
+      <!-- swiper js  -->
+      <div class="h-[70%] w-[80%] swipe">
+        <!-- slides -->
+        <style>
+          .swipe {
+            background: #f8f8f8;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            padding-right: 10%;
+            height: 100%;
+            width: auto;
+          }
+
+          swiper-container {
+            width: 90%;
+            height: 100%;
+            margin-left: 5%;
+            margin-top: 0%;
+            position: relative;
+          }
+
+          swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+            border: 1px lightslategray;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 60%;
+            margin-top: 3%;
+          }
+
+          swiper-slide img {
+            display: block;
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .navigation {
+            position: absolute;
+          }
+        </style>
+
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          grab-cursor="true"
+          navigation="true"
+          pagination-clickable="true"
+          space-between="30"
+          slides-per-view="3"
+        >
+          <!-- navigation button -->
+          <!-- <div class="swiper-button-prev absolute left-[-10%] bg-red-400">
+              
+            </div>
+            <div class="swiper-button-next absolute right-[-15%]">
+              
+            </div> -->
+
+          <!-- swiper 1 -->
+          <swiper-slide class="md:rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-gears bg-[#1D8AEC] text-white rounded-full text-2xl py-2 px-2"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Quality and Safety
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We place patients and their families at the center of all we
+                  do. We listen, understand, and respond to their needs with
+                  empathy, respect, and dignity.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 2 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-shield-virus bg-[#1D8AEC] text-white rounded-full text-2xl py-2 px-3"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Patient-Centered Care
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We continuously strive for excellence in healthcare by
+                  maintaining the highest standards of quality and safety in
+                  every aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 3 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-people-carry-box bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-3"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Compassion
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We provide care with kindness and understanding, recognizing
+                  the emotional, spiritual, and cultural aspects of each
+                  patient's journey.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 4 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-baby-carriage bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-4"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Baby Care
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We continuously strive for excellence in healthcare by
+                  maintaining the highest standards of quality and safety in
+                  every aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 5 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-credit-card bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-4"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Online Payments
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  Payment methods online are safe and secured eliminating
+                  fruadulent payment methods from spam accounts safety in every
+                  aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 6 -->
+          <swiper-slide>
+            <div class="w-full h-full flex items-center ml-[40%]">
+              <i class="fa-solid fa-question text-4xl text-[#1D8AEC]"></i>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+
+        <!-- js functions -->
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </div>
+    </section>
+
+    <!-- smaller screen card slider  -->
+    <section class="flex md:hidden flex-col h-[700px] w-full mx-0 bg-blue-50">
+      <div class="h-2/5 w-full flex flex-col items-center justify-center">
+        <h1
+          class="text-[#1D8AEC] text-lg font-semibold tracking-wide relative"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          Why You Should Trust Us
+        </h1>
+        <p
+          class="text-base text-center relative"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          Our vision is to be a trusted healthcare institution recognized for
+          our commitment to excellence, innovation, and patient-centered care.
+          We aim to be the hospital of choice for patients and the employer of
+          choice for healthcare professionals.
+        </p>
+      </div>
+
+      <!-- slider start -->
+      <div
+        class="h-3/5 w-[100%] flex second-slider"
+        data-aos="fade-down"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+      >
+        <style>
+          /* .second-slider {
+            position: relative;
+            height: 100%;
+          } */
+
+          .second-slider {
+            background: inherit;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding-left: 0;
+            padding-right: 10%;
+            padding-top: 0;
+          }
+
+          swiper-container {
+            width: 100%;
+            height: 90%;
+          }
+
+          swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 0.375rem;
+          }
+
+          swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        </style>
+
+        <swiper-container
+          class="mySwiper"
+          navigation="true"
+          pagination="true"
+          keyboard="true"
+          mousewheel="true"
+          loop="true"
+          css-mode="true"
+          easing="ease-in-out"
+          duration="800"
+        >
+          <!-- swiper 1 -->
+          <swiper-slide class="md:rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-gears bg-[#1D8AEC] text-white rounded-full text-2xl py-2 px-2"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Quality and Safety
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We place patients and their families at the center of all we
+                  do. We listen, understand, and respond to their needs with
+                  empathy, respect, and dignity.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 2 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-shield-virus bg-[#1D8AEC] text-white rounded-full text-2xl py-2 px-3"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Patient-Centered Care
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We continuously strive for excellence in healthcare by
+                  maintaining the highest standards of quality and safety in
+                  every aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 3 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-people-carry-box bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-3"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Compassion
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We provide care with kindness and understanding, recognizing
+                  the emotional, spiritual, and cultural aspects of each
+                  patient's journey.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 4 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-baby-carriage bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-4"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Baby Care
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  We continuously strive for excellence in healthcare by
+                  maintaining the highest standards of quality and safety in
+                  every aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 5 -->
+          <swiper-slide class="rounded-md">
+            <div class="bg-white h-[100%] w-[100%] flex flex-col rounded-md">
+              <div
+                class="h-2/5 w-full bg-white flex items-end justify-center rounded-md"
+              >
+                <i
+                  class="fa-solid fa-credit-card bg-[#1D8AEC] text-white rounded-full text-xl py-3 px-4"
+                ></i>
+              </div>
+              <div class="h-3/5 w-full px-4">
+                <h1 class="text-black text-lg font-semibold text-center">
+                  Online Payments
+                </h1>
+                <p class="text-gray-400 text-center text-base">
+                  Payment methods online are safe and secured eliminating
+                  fruadulent payment methods from spam accounts safety in every
+                  aspect of our services.
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- swiper 6 -->
+          <swiper-slide>
+            <div class="w-full h-full flex items-center justify-center">
+              <i class="fa-solid fa-question text-4xl text-[#1D8AEC]"></i>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </div>
+    </section>
+
+    <div class="bg-[#f8f8f8] h-[100px] w-full md:block hidden"></div>
+
+    <!-- big screen footer -->
+
+    <footer
+      class="bg-[#051F36] md:h-[500px] md:w-full relative md:pt-24 md:pl-[] md:block hidden"
+    >
+      <div class="md:h-[300px] md:w-[80%] md:flex md:flex-row md:ml-[10%]">
+        <div
+          class="md:h-full md:w-[30%] relative"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <img
+            src="images/Frame 1060.png"
+            class="md:w-[150px] md:mt-20"
+            alt="logo"
+          />
+          <p class="md:text-sm md:mt-4 capitalize text-gray-400">
+            dedicated to providing the highest quality <br />
+            healthcare services to our community.
+          </p>
+
+          <h3 class="text-white md:mt-10">
+            Email: <span class="text-gray-400">EdesCare@gmail.com</span>
+          </h3>
+          <h3 class="capitalize md:mt-4 text-white">
+            Follow us on social media
+            <span class="">
+              <i
+                class="fa-brands fa-x-twitter md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-facebook md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+              ></i>
+              <i
+                class="fa-brands fa-instagram md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </h3>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Company
+          </h3>
+          <ul class="text-gray-400">
+            <li class=""><a href="#" class="hover:text-white">Home</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">About Us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Services</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Team</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Important
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white">Our Process</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Appointment</a>
+            </li>
+            <li class="mt-4"><a href="#" class="hover:text-white">FAQ</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Quick Link
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white capitalize">Why choose us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Doctors</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white capitalize"
+                >news and articles</a
+              >
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[25%] relative"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3
+            class="md:mt-20 text-white font-semibold text-lg md:mb-4 capitalize"
+          >
+            Official info
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              Address : 1,Akpajo <br />
+              Abia State, Nigeria
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Email: EdesCare@gmail.com</a>
+            </li>
+            <li class="mt-4">Phone : +234 913 0584 871</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="w-[80%] ml-[10%] border-2 border-gray-600 mt-12" />
+      <div class="w-[80%] h-[50px] ml-[10%] md:flex flex-row justify-between">
+        <h3 class="text-gray-400">2023 All Right Reserved</h3>
+        <h3 class="text-gray-400">Website Developed By Nonsoemmy</h3>
+        <h3 class="text-gray-400">Terms & conditions</h3>
+      </div>
+
+      <div
+        class="bg-[#1D8AEC] md:w-[70%] md:h-[200px] absolute md:left-[15%] md:right-[15%] rounded-lg md:top-[-20%] flex flex-row"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+      >
+        <div class="md:h-full md:w-1/2 md:pl-[10%] md:pt-12">
+          <h3 class="capitalize text-gray-200 text-left">
+            newsletter subscribe
+          </h3>
+          <h1 class="text-white font-semibold text-[34px] leading-[40px]">
+            Subscribe For Exclusive <br />
+            Health Updates!
+          </h1>
+        </div>
+        <div class="md:h-full md:w-1/2 flex items-center justify-center">
+          <form action="" class="bg-white w-[70%] h-[48px] rounded-sm">
+            <input
+              type="email"
+              class="h-full w-[60%] capitalize text-gray-400 rounded-md outline-[0] border-[0]"
+              placeholder="enter your email"
+            />
+            <button class="md:py-1 rounded-sm md:px-7 md:ml-1 bg-[#1D8AEC]">
+              <a
+                href="appointment.html"
+                class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                >Subscribe</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bg-blue-50 h-[130px] w-full md:hidden block"></div>
+
+    <!-- footer for small screens -->
+    <footer class="md:hidden block h-[1000px] w-full bg-[#051F36]">
+      <div class="w-full h-full relative pt-[170px]">
+        <div
+          class="absolute w-[70%] h-[300px] bg-[#1D8AEC] ml-[15%] rounded-md top-[-15%] flex flex-col"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <div class="w-full h-1/2 flex flex-col items-center justify-center">
+            <h3 class="text-white text-center">Newsletter Subscribe</h3>
+            <h1 class="text-white text-center text-2xl">
+              Subscribe For Exclusive <br />
+              Health Updates!
+            </h1>
+          </div>
+          <div class="w-full h-1/2">
+            <form
+              action=""
+              class="bg-white w-[70%] h-[90px] rounded-sm flex flex-col ml-[15%]"
+            >
+              <input
+                type="email"
+                class="h-1/2 w-full capitalize text-gray-400 rounded-md outline-[0] border-[0] pl-7"
+                placeholder="enter your email"
+              />
+              <button class="py-2 rounded-sm mx-6 mb-3 px-2 bg-[#1D8AEC]">
+                <a
+                  href="appointment.html"
+                  class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                  >Subscribe</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="h-[700px] w-full flex flex-col overflow-hidden">
+          <div
+            class="h-[30%] w-full px-[10%] relative"
+            data-aos="fade-down"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="images/Frame 1060.png" class="w-[150px]" alt="logo" />
+            <h2 class="text-left text-gray-400 capitalize mt-3">
+              dedicated to providing the highest <br />
+              quality healthcare services to our community.
+            </h2>
+            <h2 class="mt-5 text-gray-400">
+              <span class="text-white">Email</span> : EdesCare@gmail.com
+            </h2>
+            <h2 class="text-white">
+              Follow on Social Media:<span class="">
+                <i
+                  class="fa-brands fa-x-twitter mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+                ></i>
+                <i
+                  class="fa-brands fa-facebook mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+                ></i>
+                <i
+                  class="fa-brands fa-instagram mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+                ></i>
+              </span>
+            </h2>
+          </div>
+          <div class="h-[30%] w-full flex flex-row pt-5">
+            <div
+              class="h-full w-1/2 pl-[10%] relative"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
+              <h2 class="my-2 text-white">Company</h2>
+              <ul class="text-gray-400 capitalize">
+                <li class="my-2">home</li>
+                <li class="my-2">about us</li>
+                <li class="my-2">section</li>
+                <li class="my-2">our team</li>
+              </ul>
+            </div>
+            <div
+              class="h-full w-1/2 pl-[5%] relative"
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
+              <h2 class="my-2 text-white text-left">Important</h2>
+              <ul class="text-gray-400 capitalize text-left">
+                <li class="my-2">our process</li>
+                <li class="my-2">appointment</li>
+                <li class="my-2">FAQ</li>
+                <li class="my-2">privacy policy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="h-[30%] w-full flex flex-row">
+            <div
+              class="h-full w-1/2 pl-[10%] relative"
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
+              <h2 class="my-2 text-white">Quick Links</h2>
+              <ul class="text-gray-400 capitalize">
+                <li class="my-2">why contact us</li>
+                <li class="my-2">doctors</li>
+                <li class="my-2">news & articles</li>
+                <li class="my-2">subscribe</li>
+              </ul>
+            </div>
+            <div
+              class="h-full w-1/2 pl-[5%] relative"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
+              <h2 class="my-2 text-white text-left">Official info</h2>
+              <ul class="text-gray-400 capitalize text-left">
+                <li class="my-2">
+                  Address : 12,sancah <br />
+                  close Abuja,Nigeria
+                </li>
+                <li class="my-2">Email : EdesCare@gmail.com</li>
+                <li class="my-2">Phone : +234 923 0584 871</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="w-[80%] ml-[10%]" />
+        <div
+          class="h-[10%] w-[80%] ml-[10%] flex flex-row justify-between pt-3 relative"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="text-gray-400 text-sm">2023 All Right Reserved</h3>
+          <h3 class="text-gray-400 text-sm text-center">
+            Developed By Nonsoemmy
+          </h3>
+          <h3 class="text-gray-400 text-sm text-right">Terms & conditions</h3>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

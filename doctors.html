@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 card" />
+    <meta http-equiv="X-UA-Compatible" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      src="https://kit.fontawesome.com/e3870bf88a.js
+      crossorigin="
+      anonymous
+    ></script>
+    <script src="https://unpkg.com/ionicons@[250px].10-0/dist/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Beau+Rivage&family=Poppins:ital,wght@1,400;1,600&family=Trispace:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+</head>
+<!-- body -->
+<body class="bg-[#F8F8F8]">
+
+    <!-- navigation -->
+    <nav
+      class="bg-[#F8F8F8] md:px-[10%] md:py-3 py-4 p[250px] md:flex md:items-center md:justify-between z-0"
+    >
+      <div
+        class="flex justify-between items-center md:pl-1 pl-6 md:pr-0 pr-6 md:relative"
+      >
+        <span class="">
+          <img
+            src="images/Frame 1421.png"
+            class="cursor-pointer md:w-auto w-[150px] md:ml-0 ml-3"
+            alt="logo"
+          />
+        </span>
+        <!-- <i class="fa-solid fa-bars mt-2 cursor-pointer text-3xl text-[#1D8AEC] mr-6 md:hidden block"
+               onclick="onToggleMenu(this)" name="menu"></i> -->
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          name="menu"
+          class="text-[40px] text-[#1D8AEC] mr-2 font-bold cursor-pointer md:hidden block"
+        ></ion-icon>
+      </div>
+
+      <ul
+        class="nav-links md:flex md:items-end md:static md:z-[1] z-[1] absolute md:min-h-fit min-h-[40vh] left-[-100%] top-[[250px]%] md:pt-0 pt-14 bg-[#F8F8F8] w-full md:w-auto md:py-0 py-4 md:px-0 px-[12px] ease-in duration-500 md:bg-opacity-0 bg-opacity-100"
+      >
+        <li class="mx-6 md:my-1 md:mt-auto mt-0">
+          <a
+            class="capitalize text-lg hover:text-[#1D8AEC] font-bold text-[#000000] duration-300"
+            id="act"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg font-bold hover:text-[#1D8AEC] text-[#000000] duration-300"
+            href="insights.html"
+            >Insights</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg hover:text-black font-bold text-[#1D8AEC] duration-300 active"
+            href="doctors.html"
+            >Doctors</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg font-bold text-black hover:text-[#1D8AEC] duration-300"
+            href="#"
+            >Departments</a
+          >
+        </li>
+        <button
+          class="bg-[#1D8AEC] md:py-2 py-3 md:px-6 px-9 rounded-lg font-bold capitalize md:ml-12 ml-6 md:mt-1 my-4 md:my-0 md:mx-0 m[250px] text-white hover:text-black duration-300"
+        >
+          <a href="appointment.html">Book Appointment</a>
+        </button>
+      </ul>
+    </nav>
+    <script src="main.js"></script>
+
+        <!-- section for big screens -->
+    <section class="h-[650px] w-full relative md:block hidden">
+        <div class="h-1/5 w-full flex flex-col justify-end pl-[10%]">
+            <h4 class="text-black font-semibold text-lg">Our Doctors</h4>
+            <h4 class="text-[#1D8AEC] font-semibold text-3xl tracking-widest">Meet Our Qualified Medical Doctors</h4>
+        </div>
+
+            <div class="h-4/5 w-full top rounded-md bg-red-300">
+                <!-- <div class="h-[322px] w-[350px] bg-no-repeat flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/Rectangle 886.png" class=" w-[220px] ml-8 mt-14" alt="doctor photo">
+                    <div class="w-[48%] h-[30%] ml-[15%] bottom-[-15%] bg-white absolute
+                    border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Josh Efe</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Cardiologist</h2>
+                    </div>
+                </div> -->
+
+                <!-- doctor slides -->
+                <style>
+                    /* .top {
+                      position: relative;
+                      height: 100%;
+                    } */
+                
+                    .top {
+                      background: 0;
+                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                      font-size: 14px;
+                      color: #000;
+                      margin: 0;
+                      padding-top: 0;
+                      
+                    }
+                
+                    swiper-container {
+                      width: 70%;
+                      height: 100%;
+                      margin-left: 5%; 
+                      background-color: 0; 
+                      padding-top: 5%;
+                      
+                    }
+                
+                    swiper-slide {
+                      text-align: center;
+                      font-size: 18px;
+                      background: #fff;
+                      /* display: flex;
+                      justify-content: center;
+                      align-items: center; */
+                      position: relative;
+                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                      border-radius: 0.375rem;
+                      height: 70%;
+                    }
+                
+                    swiper-slide img {
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
+                  </style>
+                
+                  <swiper-container class="mySwiper" navigation="false" grab-cursor="true" pagination="true" pagination-clickable="true" space-between="40"
+                    slides-per-view="3">
+
+                    <!-- slide one -->
+                    <swiper-slide
+                    data-aos="fade-right"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                        <div class="h-[100%] w-full flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                            <img src="images/Rectangle 886.png" class=" w-[260px] h-[288px] ml-16 mt-6 absolute " alt="doctor photo">
+                            <div class="w-[48%] h-[30%] ml-[25%] bottom-[-15%] bg-white absolute
+                            border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                                <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Josh Efe</h2>
+                                <h2 class="text-[#121212] font-semibold text-lg ">Cardiologist</h2>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+
+                    <!-- slide two -->
+                    <swiper-slide
+                    data-aos="fade-down"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                        <div class="h-[100%] w-full flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                            <img src="images/Rectangle 887.png" class=" w-[260px] h-[288px] ml-16 mt-6 absolute " alt="doctor photo">
+                            <div class="w-[48%] h-[30%] ml-[25%] bottom-[-15%] bg-white absolute
+                            border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                                <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Gift Ada</h2>
+                                <h2 class="text-[#121212] font-semibold text-lg ">Neurologist</h2>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <!-- slide three -->
+                    <swiper-slide
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                        <div class="h-[100%] w-full flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                            <img src="images/Rectangle 885.png" class=" w-[288px] h-[288px] ml-16 mt-6 absolute " alt="doctor photo">
+                            <div class="w-[48%] h-[30%] ml-[25%] bottom-[-15%] bg-white absolute
+                            border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                                <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Max Brad</h2>
+                                <h2 class="text-[#121212] font-semibold text-lg ">Dentist</h2>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+
+                    <!-- slide four -->
+                    <swiper-slide>
+                        <div class="h-[100%] w-full flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                            <img src="images/Rectangle 884.png" class=" w-[288px] h-[288px] ml-16 mt-6 absolute " alt="doctor photo">
+                            <div class="w-[48%] h-[30%] ml-[25%] bottom-[-15%] bg-white absolute
+                            border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                                <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Sandra Kim</h2>
+                                <h2 class="text-[#121212] font-semibold text-lg ">Pediatrician</h2>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+
+                    <!-- slide five -->
+                    <swiper-slide>
+                        <div class="h-[100%] w-full flex items-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                            <img src="images/doc.png" class=" w-[288px] h-[288px] ml-10 mt-6 absolute " alt="doctor photo">
+                            <div class="w-[48%] h-[30%] ml-[25%] bottom-[-15%] bg-white absolute
+                            border-1 border-[#121212] shadow-md rounded-md flex flex-col items-center justify-center">
+                                <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Ikemefuna Micheal</h2>
+                                <h2 class="text-[#121212] font-semibold text-lg ">Head Doctor</h2>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    
+                  </swiper-container>
+
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+            </div>
+    </section>
+
+
+
+    <!-- section for smaller screens -->
+
+    <section class="h-[650px] w-full overflow-hidden md:hidden block">
+        <div class="h-1/5 w-full flex flex-col justify-center pl-[8%] relative">
+            <h3 class="text-black font-semibold"
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out">Our Doctors</h3>
+            <h1 class="text-[#1D8AEC] font-semibold text-xl"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out">Meet Our Qualified Medical Doctors</h1>
+        </div>
+
+        <!-- swipers -->
+        <div class="h-4/5 w-full purple">
+            <style>
+                /* .second-slider {
+                  position: relative;
+                  height: 100%;
+                } */
+      
+                .purple {
+                  background: inherit;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                  font-size: 14px;
+                  color: #000;
+                  margin: 0;
+                  padding-left: 0;
+                  padding-right: 0%;
+                  padding-top: 5%;
+                }
+      
+                swiper-container {
+                  width: 90%;
+                  height: 85%;
+                  z-index: 0;
+                }
+      
+                swiper-slide {
+                  text-align: center;
+                  font-size: 18px;
+                  background: #fff;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 85%;
+                  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 0.375rem; */
+                }
+      
+                swiper-slide img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              </style>
+      
+              <swiper-container
+                class="mySwiper"
+                navigation="true"
+                pagination="false"
+                keyboard="true"
+                mousewheel="true"
+                loop="false"
+                css-mode="true"
+                easing="ease-in-out"
+                duration="800"
+              >
+
+            <!-- slide one -->
+            <swiper-slide>
+                <div class="h-[100%] w-full flex items-center justify-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/Rectangle 886.png" class=" w-[auto] h-[288px] mt-14 absolute " alt="doctor photo">
+                    <div class="w-[48%] h-[30%] bottom-[-15%] bg-white absolute
+                     shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Josh Efe</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Cardiologist</h2>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
+            <!-- slide two -->
+            <swiper-slide>
+                <div class="h-[100%] w-full flex items-center justify-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/Rectangle 887.png" class=" w-[auto] h-[288px] mt-12 absolute " alt="doctor photo">
+                    <div class="w-[48%] h-[30%] bottom-[-15%] bg-white absolute
+                     shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Gift Ada</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Neurologist</h2>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
+            <!-- slide three -->
+            <swiper-slide>
+                <div class="h-[100%] w-full flex items-center justify-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/Rectangle 885.png" class=" w-[auto] h-[288px] mt-12 absolute " alt="doctor photo">
+                    <div class="w-[48%] h-[30%] bottom-[-15%] bg-white absolute
+                     shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Max Brad</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Dentist</h2>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
+            <!-- slide four -->
+            <swiper-slide>
+                <div class="h-[100%] w-full flex items-center justify-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/Rectangle 884.png" class=" w-[auto] h-[288px] mt-12 absolute " alt="doctor photo">
+                    <div class="w-[48%] h-[30%] bottom-[-15%] bg-white absolute
+                     shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Sandra Kim</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Pediatrician</h2>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
+            <!-- slide five -->
+            <swiper-slide>
+                <div class="h-[100%] w-full flex items-center justify-center relative" style="background-image: url('images/Rectangle\ 875.png');">
+                    <img src="images/doc.png" class=" w-[auto] h-[288px]  mt-12 absolute " alt="doctor photo">
+                    <div class="w-[48%] h-[30%] bottom-[-15%] bg-white absolute
+                     shadow-md rounded-md flex flex-col items-center justify-center">
+                        <h2 class="text-[#1D8AEC] font-semibold text-xl tracking-wider">Dr  Ikemefuna Micheal</h2>
+                        <h2 class="text-[#121212] font-semibold text-lg ">Head Doctor</h2>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        </div>
+    </section>
+
+    <!-- big screen main -->
+    <main class="w-full h-[600px] md:flex flex-row hidden bg-inherit overflow-hidden">
+        <div class="w-[40%] h-full pl-[5%]">
+            <img src="images/Rectangle 882.png" class="w-[520px] h-[600px]" alt="female doctor"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out">
+        </div>
+        <div class="w-[60%] h-full flex flex-col">
+            <div class="h-2/5 w-full flex flex-col items-end justify-center bg-inherit pr-[10%]">
+                <h2 class="text-black text-xl font-semibold tracking-wide"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out">Appointment</h2>
+                <h2 class="text-[#1D8AEC] font-semibold text-4xl tracking-wider mt-2"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out">Widest Network Of HealthCare</h2>
+                    <p class="text-[#121212] text-sm mt-5"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">At EdesCare, we are dedicated to providing the highest quality healthcare <br> services to our community.
+                         Our mission is to improve the health and well- <br>being of our patients through compassionate care,
+                         cutting-edge <br> technology, and a commitment to excellence.</p>
+            </div>
+            <div class="h-[55%] w-[80%] ml-[10%] rounded-md flex flex-row" style="background-image: url('images/Rectangle\ 883.png');">
+                <div class="h-full w-[45%] rounded-md flex items-center justify-center"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out">
+                    <img src="images/Rectangle 888.png" class="" alt="doctor and patient">
+                </div>
+                <div class="bg-inherit h-full w-[55%]">
+                    <h1 class="text-[#1D8AEC] font-semibold text-3xl text-center mt-3"
+                    data-aos="fade-down"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">Make An Appointment</h1>
+                    <form action="" class="" aria-required="true"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                        <input type="text" id="name" placeholder="Name" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
+                        <input type="email" id="email" placeholder="Email" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
+                        <input type="tel" id="number" placeholder="Phone" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
+                        <button class="bg-[#1D8AEC] rounded-md py-2 w-[80%] mx-[10%] my-3
+                         hover:bg-[#1d8becaf] duration-300 ease-in-out"><a href="#" 
+                         class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- big screen end -->
+
+    <!-- small screen main -->
+    <main class="h-[1100px] w-full bg-inherit md:hidden flex flex-col overflow-hidden">
+        <div class="h-[15%] w-full flex flex-col items-end justify-center pr-[5%]">
+            <h2 class="text-black font-semibold text-lg"
+                    data-aos="fade-right"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">Appointment</h2>
+            <h1 class="text-[#1D8AEC] font-semibold text-lg tracking-wider"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">Widest Network Of HealthCare</h1>
+            <p class="text-xs text-[#121212] text-right"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">At EdesCare, we are dedicated to providing the highest <br> quality healthcare services to our community.
+                Our mission <br>is to improve the health and well-being of our patients <br> through compassionate care,
+                 cutting-edge technology, and <br> a commitment to excellence.</p>
+        </div>
+        <div class="h-[25%] w-full flex items-center justify-center">
+            <img src="images/Rectangle 882.png" class="w-[70%] max-h-[270px]" alt="female doctor"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+        </div>
+        <div class="h-[60%] w-full flex items-center justify-center">
+            <div class="h-[80%] w-[70%] rounded-md" style="background-image: url('images/Rectangle\ 875.png'); 
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+                <img src="images/Rectangle 888.png" class="w-[70%] h-[40%] mx-[15%] my-4"
+                    data-aos="fade-down"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out" alt="doctor and patient">
+                <h1 class="text-[#1D8AEC] text-center font-semibold text-lg"
+                    >Make An Appointment</h1>
+                <form action="" class="" aria-required="true">
+                    <input type="text" id="name" placeholder="Name" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                    <input type="email" id="email" placeholder="Email" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                    data-aos="fade-right"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                    <input type="tel" id="number" placeholder="Phone" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                    data-aos="fade-down"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out">
+                    <button class="bg-[#1D8AEC] rounded-md py-2 w-[70%] mx-[15%] my-2
+                         hover:bg-[#1d8becaf] duration-300 ease-in-out"
+                         data-aos="fade-left"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-out"><a href="#" 
+                         class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</a></button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <!-- small main end -->
+
+
+
+    <!-- big screen footer -->
+    <div class="bg-[#f8f8f8] h-[150px] w-full md:block hidden"></div>
+    <footer
+      class="bg-[#051F36] md:h-[500px] md:w-full relative md:pt-24 md:pl-[] md:block hidden"
+    >
+      <div class="md:h-[300px] md:w-[80%] md:flex md:flex-row md:ml-[10%]">
+        <div
+          class="md:h-full md:w-[30%] relative"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <img
+            src="images/Frame 1060.png"
+            class="md:w-[150px] md:mt-20"
+            alt="logo"
+          />
+          <p class="md:text-sm md:mt-4 capitalize text-gray-400">
+            dedicated to providing the highest quality <br />
+            healthcare services to our community.
+          </p>
+
+          <h3 class="text-white md:mt-10">
+            Email: <span class="text-gray-400">EdesCare@gmail.com</span>
+          </h3>
+          <h3 class="capitalize md:mt-4 text-white">
+            Follow us on social media
+            <span class="">
+              <i
+                class="fa-brands fa-x-twitter md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-facebook md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+              ></i>
+              <i
+                class="fa-brands fa-instagram md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </h3>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Company
+          </h3>
+          <ul class="text-gray-400">
+            <li class=""><a href="#" class="hover:text-white">Home</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">About Us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Services</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Team</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Important
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white">Our Process</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Appointment</a>
+            </li>
+            <li class="mt-4"><a href="#" class="hover:text-white">FAQ</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[15%] relative"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Quick Link
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white capitalize">Why choose us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Doctors</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white capitalize"
+                >news and articles</a
+              >
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:h-full md:w-[25%] relative"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <h3
+            class="md:mt-20 text-white font-semibold text-lg md:mb-4 capitalize"
+          >
+            Official info
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              Address : 1,Akpajo <br />
+              Abia State, Nigeria
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Email: EdesCare@gmail.com</a>
+            </li>
+            <li class="mt-4">Phone : +234 913 0584 871</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="w-[80%] ml-[10%] border-2 border-gray-600 mt-12" />
+      <div class="w-[80%] h-[50px] ml-[10%] md:flex flex-row justify-between">
+        <h3 class="text-gray-400">2023 All Right Reserved</h3>
+        <h3 class="text-gray-400">Website Developed By Nonsoemmy</h3>
+        <h3 class="text-gray-400">Terms & conditions</h3>
+      </div>
+
+      <div
+        class="bg-[#1D8AEC] md:w-[70%] md:h-[200px] absolute md:left-[15%] md:right-[15%] rounded-lg md:top-[-20%] flex flex-row"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+      >
+        <div class="md:h-full md:w-1/2 md:pl-[10%] md:pt-12">
+          <h3 class="capitalize text-gray-200 text-left">
+            newsletter subscribe
+          </h3>
+          <h1 class="text-white font-semibold text-[34px] leading-[40px]">
+            Subscribe For Exclusive <br />
+            Health Updates!
+          </h1>
+        </div>
+        <div class="md:h-full md:w-1/2 flex items-center justify-center">
+          <form action="" class="bg-white w-[70%] h-[48px] rounded-sm">
+            <input
+              type="email"
+              class="h-full w-[60%] capitalize text-gray-400 rounded-md outline-[0] border-[0]"
+              placeholder="enter your email"
+            />
+            <button class="md:py-1 rounded-sm md:px-7 md:ml-1 bg-[#1D8AEC]">
+              <a
+                href="appointment.html"
+                class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                >Subscribe</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- big footer end -->
+
+    <div class="bg-inherit h-[130px] w-full md:hidden block"></div>
+
+    <!-- small footer begins -->
+
+
+    <!-- footer for small screens -->
+    <footer class="md:hidden block h-[1000px] w-full bg-[#051F36]">
+        <div class="w-full h-full relative pt-[170px]">
+          <div
+            class="absolute w-[70%] h-[300px] bg-[#1D8AEC] ml-[15%] rounded-md top-[-15%] flex flex-col"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <div class="w-full h-1/2 flex flex-col items-center justify-center">
+              <h3 class="text-white text-center">Newsletter Subscribe</h3>
+              <h1 class="text-white text-center text-2xl">
+                Subscribe For Exclusive <br />
+                Health Updates!
+              </h1>
+            </div>
+            <div class="w-full h-1/2">
+              <form
+                action=""
+                class="bg-white w-[70%] h-[90px] rounded-sm flex flex-col ml-[15%]"
+              >
+                <input
+                  type="email"
+                  class="h-1/2 w-full capitalize text-gray-400 rounded-md outline-[0] border-[0] pl-7"
+                  placeholder="enter your email"
+                />
+                <button class="py-2 rounded-sm mx-6 mb-3 px-2 bg-[#1D8AEC]">
+                  <a
+                    href="appointment.html"
+                    class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                    >Subscribe</a
+                  >
+                </button>
+              </form>
+            </div>
+          </div>
+  
+          <div class="h-[700px] w-full flex flex-col overflow-hidden">
+            <div
+              class="h-[30%] w-full px-[15%] relative"
+              data-aos="fade-down"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+            >
+              <img src="images/Frame 1060.png" class="w-[150px]" alt="logo" />
+              <h2 class="text-left text-gray-400 capitalize mt-3 text-xs">
+                dedicated to providing the highest <br />
+                quality healthcare services to our community.
+              </h2>
+              <h2 class="mt-5 text-gray-400">
+                <span class="text-white text-xs">Email</span> : EdesCare@gmail.com
+              </h2>
+              <h2 class="text-white text-xs">
+                Follow on Social Media:<span class="">
+                  <i
+                    class="fa-brands fa-x-twitter mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+                  ></i>
+                  <i
+                    class="fa-brands fa-facebook mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+                  ></i>
+                  <i
+                    class="fa-brands fa-instagram mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+                  ></i>
+                </span>
+              </h2>
+            </div>
+            <div class="h-[30%] w-full flex flex-row pt-5">
+              <div
+                class="h-full w-1/2 pl-[15%] relative"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+              >
+                <h2 class="my-2 text-white text-xs">Company</h2>
+                <ul class="text-gray-400 capitalize">
+                  <li class="my-2 text-xs">home</li>
+                  <li class="my-2 text-xs">about us</li>
+                  <li class="my-2 text-xs">section</li>
+                  <li class="my-2 text-xs">our team</li>
+                </ul>
+              </div>
+              <div
+                class="h-full w-1/2 pl-[5%] relative"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+              >
+                <h2 class="my-2 text-white text-left text-xs">Important</h2>
+                <ul class="text-gray-400 capitalize">
+                  <li class="my-2text-xs">our process</li>
+                  <li class="my-2text-xs">appointment</li>
+                  <li class="my-2text-xs">FAQ</li>
+                  <li class="my-2text-xs">privacy policy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="h-[30%] w-full flex flex-row">
+              <div
+                class="h-full w-1/2 pl-[15%] relative"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+              >
+                <h2 class="my-2 text-white text-xs">Quick Links</h2>
+                <ul class="text-gray-400 capitalize">
+                  <li class="my-2 text-xs">why contact us</li>
+                  <li class="my-2 text-xs">doctors</li>
+                  <li class="my-2 text-xs">news & articles</li>
+                  <li class="my-2 text-xs">subscribe</li>
+                </ul>
+              </div>
+              <div
+                class="h-full w-1/2 pl-[5%] relative"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+              >
+                <h2 class="my-2 text-white text-xs">Official info</h2>
+                <ul class="text-xs text-gray-400">
+                  <li class="my-2 text-xs">
+                    Address : 12,sancah <br />
+                    close Abuja,Nigeria
+                  </li>
+                  <li class="my-2 text-xs">Email : EdesCare@gmail.com</li>
+                  <li class="my-2 text-xm">Phone : +234 923 0584 871</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="w-[80%] ml-[10%]" />
+          <div
+            class="h-[10%] w-[80%] ml-[10%] flex flex-row justify-between pt-3 relative"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
+            <h3 class="text-gray-400 text-sm">2023 All Right Reserved</h3>
+            <h3 class="text-gray-400 text-sm text-center">
+              Developed By Nonsoemmy
+            </h3>
+            <h3 class="text-gray-400 text-sm text-right">Terms & conditions</h3>
+          </div>
+        </div>
+      </footer>
+  
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

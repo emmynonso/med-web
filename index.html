@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EdesCare Hospital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      src="https://kit.fontawesome.com/e3870bf88a.js
+      crossorigin="
+      anonymous
+    ></script>
+    <script src="https://unpkg.com/ionicons@[250px].10-0/dist/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Beau+Rivage&family=Poppins:ital,wght@1,400;1,600&family=Trispace:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white scroll-smooth">
+    <nav
+      class="bg-[#F8F8F8] md:px-[10%] md:py-3 py-4 p[250px] md:flex md:items-center md:justify-between"
+    >
+      <div
+        class="flex justify-between items-center md:pl-1 pl-6 md:pr-0 pr-6 md:relative"
+      >
+        <span class="">
+          <img
+            src="images/Frame 1421.png"
+            class="cursor-pointer md:w-auto w-[150px] md:ml-0 ml-3"
+            alt="logo"
+          />
+        </span>
+        <!-- <i class="fa-solid fa-bars mt-2 cursor-pointer text-3xl text-[#1D8AEC] mr-6 md:hidden block"
+           onclick="onToggleMenu(this)" name="menu"></i> -->
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          name="menu"
+          class="text-[40px] text-[#1D8AEC] mr-2 font-bold cursor-pointer md:hidden block"
+        ></ion-icon>
+      </div>
+
+      <ul
+        class="nav-links md:flex md:items-end md:static md:z-[1] z-[1] absolute
+         md:min-h-fit min-h-[40vh] left-[-100%] top-[[250px]%] md:pt-0 pt-14 bg-[#F8F8F8]
+          w-full md:w-auto md:py-0 py-4 md:px-0 px-[12px] ease-in duration-500 md:bg-opacity-0 bg-opacity-100"
+      >
+        <li class="mx-6 md:my-1 md:mt-auto mt-0">
+          <a
+            class="capitalize text-lg text-[#1D8AEC] font-bold hover:text-[#000000] duration-300 active"
+            id="act"
+            href="#"
+            >Home</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-black text-lg font-bold hover:text-[#1D8AEC] duration-300"
+            href="insights.html"
+            >Insights</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg text-black font-bold hover:text-[#1D8AEC] duration-300"
+            href="doctors.html"
+            >Doctors</a
+          >
+        </li>
+        <li class="mx-6 md:my-1 my-6">
+          <a
+            class="capitalize text-lg font-bold text-black hover:text-[#1D8AEC] duration-300"
+            href="#"
+            >Departments</a
+          >
+        </li>
+        <button
+          class="bg-[#1D8AEC] md:py-2 py-3 md:px-6 px-9 rounded-lg font-bold capitalize md:ml-12 ml-6 md:mt-1 my-4 md:my-0 md:mx-0 m[250px] text-white hover:text-black duration-300"
+        >
+          <a href="appointment.html">Book Appointment</a>
+        </button>
+      </ul>
+    </nav>
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("left-0");
+      }
+    </script>
+
+    <section
+      class="md:h-[900px] w-full bg-no-repeat md:mt-6 bg-center overflow-hidden md:block hidden"
+      style="
+        background-image: url('images/Rectangle\ 852.png');
+        background-size: 1200px;
+      "
+    >
+      <!-- wide screen section begin -->
+      <div
+        class="md:h-full md:w-full bg-no-repeat"
+         style="
+          background-image: url('images/Ellipse\ 281.png');
+          background-size: 640px;
+        " 
+      >
+        <div
+          class="md:h-[80%] flex md:flex-row flex-col-reverse md:m[250px] bg-no-repeat"
+        >
+          <div
+            class="md:w-[55%] md:h-full bg-no-repeat md:pl-[10%] md:pt-[18%] relative" 
+            data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <h4 class="text-[#1D8AEC] md:ml-[60px] md:text-sm">
+              A Hospital Of experts
+            </h4>
+            <img
+              src="images/Line 37.png"
+              class="absolute left-[1[250px]%] top-[38%] md:w-[50px]"
+              alt="line"
+            />
+            <h1 class="md:text-5xl font-medium">
+              Leading Your Health To <br /><span class="text-[#1D8AEC]">
+                Develop Your Life</span
+              >
+            </h1>
+            <p class=" md:text-sm md:mt-6 text-left text-gray-600">
+              At EdesCare, we are dedicated to providing the highest quality
+              healthcare <br />
+              services to our community. Our mission is to improve the health
+              and well- <br />
+              being of our patients through compassionate care, cutting-edge
+              technology, <br />
+              and a commitment to excellence.
+            </p>
+            <button class="md:py-2 rounded-md md:mt-16 md:px-4 bg-[#1D8AEC]">
+              <a
+                href="appointment.html"
+                class="text-white capitalize hover:text-black duration-300"
+                >book appointment</a
+              >
+            </button>
+          </div>
+          <!-- right div -->
+          <div class="w-[45%] h-full relative"
+          data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+            <img
+              src="images/Rectangle 865.png"
+              class="absolute md:w-[330px] w-[70px] md:right-[20%] right-[10%] md:bottom-[17%]"
+              alt="blue image"
+            />
+            <img
+              src="images/Rectangle 864.png"
+              class="absolute md:w-[330px] md:bottom-[26%] md:right-[28%]"
+              alt=""
+            />
+            <img
+              src="images/doc.png"
+              class="absolute md:w-[365px] md:right-[24.5%] md:bottom-[26%]"
+              alt="Doctor"
+            />
+            <div
+              class="md:w-[30%] md:h-[60px] bg-white rounded-md absolute md:top-[22%] md:left-[7%] 
+              ease-in-out duration-500 cursor-pointer small-div"
+            >
+              <img
+                src="images/ph_phone-call-light (1).png"
+                class="absolute md:w-[30px] md:top-4 md:left-6"
+                alt="call"
+              />
+              <h4 class="text-black md:ml-16 md:mt-2 font-semibold">374647</h4>
+              <p class="md:ml-16 text-xs font-medium">
+                Emergency Line <span class="text-[#1D8AEC]">(24/7)</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:w-full md:h-[20%] md:flex md:px-[18%]">
+          <div
+            class="md:w-[250px] bg-white md:h-[110px] rounded-md md:mx-10"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <div class="w-full h-[100%] bg-inherit box rounded-md relative ease-in-out duration-500 cursor-pointer
+            pt-7">
+            <img
+              src="images/Group 1427.png"
+              class="absolute w-[30px] md:top-10 md:left-6"
+              alt="world"
+            />
+             <h2 class="md:ml-16 md:mt- font-semibold">Request Appointment</h2>
+            <h2 class="md:ml-16">
+              Available <span class="text-[#1D8AEC]">(24/7)</span>
+            </h2>
+            </div>
+          </div>
+          <div
+            class="md:w-[250px] bg-white md:h-[110px] rounded-md md:mx-10"
+            data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+          <div class="w-full h-[100%] bg-inherit box rounded-md relative ease-in-out duration-500 cursor-pointer
+          pt-7">
+            <img
+              src="images/ph_phone-call-light.png"
+              class="absolute w-[30px] md:top-10 md:left-6"
+              alt="phone"
+            />
+            <h2 class="md:ml-16 font-semibold">Service Hours</h2>
+            <h2 class="md:ml-16">
+              Available <span class="text-[#1D8AEC]">(24/7)</span>
+            </h2>
+            </div>
+          </div>
+          <div
+            class="md:w-[250px] bg-white md:h-[110px] rounded-md md:mx-10"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+          <div class="w-full h-[100%] bg-inherit box rounded-md relative ease-in-out duration-500 cursor-pointer
+          pt-7">
+            <img
+              src="images/ph_phone-call-light (1).png"
+              class="absolute w-[30px] md:top-10 md:left-6"
+              alt="Location"
+            />
+            <h2 class="md:ml-16 font-semibold">Find Location</h2>
+            <h2 class="md:ml-16">
+              Available <span class="text-[#1D8AEC]">(24/7)</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- wide screen section end -->
+
+    </section>
+
+    <!-- section for smaller screens -->
+
+    <section class="md:hidden flex h-[1200px] w-full  overflow-hidden">
+      <div class="md:hidden flex h-full w-full flex-col">
+        <div class="h-[30%] w-full relative"
+        data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <img
+            src="images/Rectangle 865.png"
+            class="absolute w-[240px] left-[28%] top-[35%]"
+            alt="blue"
+          />
+          <img
+            src="images/Rectangle 864.png"
+            class="absolute w-[240px] left-[17%] top-[15%]"
+            alt="grey"
+          />
+          <img
+            src="images/doc.png"
+            class="absolute w-[265px] left-[15%] top-[10%]"
+            alt=""
+          />
+          <div
+            class="w-[130px] h-[60px] bg-white rounded-md absolute top-[8%] left-[7%] small-div"
+          >
+            <img
+              src="images/ph_phone-call-light (1).png"
+              class="absolute w-[25px] top-4 left-1"
+              alt="call"
+            />
+            <h4 class="text-black ml-9 font-semibold">374647</h4>
+            <p class="ml-9 text-xs font-medium">
+              Emergency Line <span class="text-[#1D8AEC]">(24/7)</span>
+            </p>
+          </div>
+        </div>
+        <div class="h-[70%]">
+          <div class="h-[55%] w-full relative pt-[18%] pl-[10%]"
+          data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+            <img
+              src="images/Line 37.png"
+              class="absolute left-[10%] top-[18.5%] w-[50px]"
+              alt="line"
+            />
+            <h4 class="text-[#1D8AEC] ml-[16%] text-base">
+              A Hospital Of experts
+            </h4>
+            <h1 class="text-2xl font-medium">
+              Leading Your Health To <br /><span class="text-[#1D8AEC]">
+                Develop Your Life</span
+              >
+            </h1>
+            <p class="text-sm text-justify mt-6 text-gray-600">
+              At EdesCare, we are dedicated to providing <br />
+              the highest quality healthcare services to <br />
+              our community. Our mission is to improve <br />
+              the health and well- being of our <br />
+              patients through compassionate care,<br />
+              cutting-edge technology, and a commitment <br />to excellence.
+            </p>
+            <button class="py-3 rounded-md mt-6 px-4 bg-[#1D8AEC]">
+              <a
+                href="appointment.html"
+                class="text-white capitalize font-medium text-lg"
+                >book appointment</a
+              >
+            </button>
+          </div>
+
+          <!-- small screens -->
+          <div class="h-[45%] w-full flex flex-col items-center justify-evenly">
+            <div
+              class="w-[250px] bg-white h-[80px] rounded-md md:mx-10 box relative"
+              data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out"
+            >
+              <img
+                src="images/Group 1427.png"
+                class="absolute w-[30px] top-5 left-4"
+                alt="world"
+              />
+              <h2 class="ml-14 mt-4 font-semibold">Request Appointment</h2>
+              <h2 class="ml-14">
+                Available <span class="text-[#1D8AEC]">(24/7)</span>
+              </h2>
+            </div>
+            <div
+              class="w-[250px] bg-white h-[80px] rounded-md md:mx-10 box relative ease-in-out duration-200 cursor-pointer"
+              data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out"
+            >
+              <img
+                src="images/ph_phone-call-light.png"
+                class="absolute w-[30px] top-5 left-4"
+                alt="phone"
+              />
+              <h2 class="ml-14 mt-4 font-semibold">Service Hours</h2>
+              <h2 class="ml-14">
+                Available <span class="text-[#1D8AEC]">(24/7)</span>
+              </h2>
+            </div>
+            <div
+              class="w-[250px] bg-white h-[80px] rounded-md md:mx-10 box relative ease-in-out duration-200 cursor-pointer"
+              data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
+            >
+              <img
+                src="images/ph_phone-call-light (1).png"
+                class="absolute w-[30px] top-5 left-4"
+                alt="Location"
+              />
+              <h2 class="ml-14 mt-4 font-semibold">Find Location</h2>
+              <h2 class="ml-14">
+                Available <span class="text-[#1D8AEC]">(24/7)</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main
+      class="md:h-[750px] h-[1100px] w-full bg-[#F6FBFE] flex md:flex-row flex-col overflow-hidden"
+    >
+      <div
+        class="md:h-full h-[40%] md:w-1/2 relative flex items-center justify-center"
+        data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out"
+      >
+        <img
+          src="images/Rectangle 869.png"
+          class="md:w-[350px] w-[250px]"
+          alt="woman doc"
+        />
+        <img
+          src="images/Rectangle 870.png"
+          class="md:w-[205px] w-[150px] absolute md:left-[20%] left-[10%] md:bottom-[8%] bottom-1"
+          alt=""
+        />
+      </div>
+      <div class="md:h-[80%] md:w-1/2 bg-inherit md:pt-[8%] relative"
+      data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <h4
+          class="text-black md:mt-0 mt-3 md:font-semibold md:text-left text-center font-bold relative"
+        >
+          About EdesCare
+        </h4>
+        <h2
+          class="text-[#1D8AEC] md:text-5xl text-2xl md:font-normal font-bold md:mt-3 md:text-left text-center"
+        >
+          Short Story About <br />
+          EdesCare
+        </h2>
+        <p
+          class="md:mt-6 capitalize md:mx-0 mx-5 md:text-base text-sm md:text-left text-center leading-8 mt-3"
+        >
+          At EdesCare, we are dedicated to providing
+          <br class="md:hidden block" />
+          the highest quality healthcare <br class="md:block hidden" />
+          services <br class="md:hidden block" />
+          to our community. Our mission is to improve the health and well-being
+          <br class="md:block hidden" />
+          of our patients through compassionate care, cutting-edge
+          technology,<br class="md:block hidden" />
+          and a commitment to excellence.
+        </p>
+
+        <div
+          class="md:h-[250px] h-[200px] md:w-[400px] w-full flex flex-wrap md:px-0 px-[12%]"
+        >
+        <!-- 1st set for mini div -->
+          <div class="md:h-1/2 h-1/2 w-full flex flex-row md:pt-6 pt-[5%]">
+            <div
+            class="md:h-[80px] h-[80px] md:w-[155px] w-36 md:ml-0 rounded-md
+             bg-[#c8e1f7] flex flex-wrap items-center justify-center relative animate-pulse"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <h2 class="text-xs font-semibold text-[#1D8AEC] ">
+              Happy Patients <br />
+              <span class="text-2xl tracking-normal font-bold">20,000+</span>
+            </h2>
+          </div>
+          <div
+            class="md:h-[80px] h-[80px] w-36 ml-6 md:w-[155px] rounded-md
+             bg-[#dafbca] flex items-center justify-center md:ml-8 relative animate-pulse"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <h2 class="text-xs font-semibold text-[#51D712]">
+              Hospital Patients <br />
+              <span class="text-2xl tracking-normal font-bold ml-4">200+</span>
+            </h2>
+          </div>
+          </div>
+
+          <!-- 2nd set of mini div -->
+        <div class="md:h-1/2 h-1/2 w-full flex flex-row">
+          <div
+            class="md:h-[80px] h-[80px] w-36 md:w-[155px] rounded-md bg-[#fecccc] flex items-center justify-center mt-2 animate-pulse"
+            data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <h2 class="text-xs font-semibold text-[#EC1D1D] text-center">
+              Awards <br />
+              <span class="text-2xl tracking-normal font-bold ml">100+</span>
+            </h2>
+          </div>
+          <div
+            class="md:h-[80px] h-[80px] w-36 md:w-[155px] rounded-md bg-[#c6c5c5] flex items-center justify-center md:ml-8 ml-6 mt-2 animate-pulse"
+            data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out"
+          >
+            <h2 class="text-xs font-semibold text-[#121212] text-center">
+              Employees <br />
+              <span class="text-2xl tracking-normal font-bold ml">500+</span>
+            </h2>
+          </div>
+        </div>
+        </div>
+        <div
+          class="md:h-[20%] md:w-full md:block flex items-center justify-center"
+        >
+          <button
+            class="md:py-2 rounded-md md:mt-2 md:px-4 bg-[#1D8AEC] md:block hidden"
+          >
+            <a
+              href="appointment.html"
+              class="text-white capitalize hover:text-black duration-300"
+              >Read More</a
+            >
+          </button>
+          <button
+            class="md:py-2 py-2 rounded-md md:mt-2 mt-8 md:px-4 px-6 bg-[#1D8AEC] md:hidden"
+          >
+            <a
+              href="appointment.html"
+              class="text-white capitalize hover:text-black duration-300"
+              >Read More</a
+            >
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="bg-[#F6FBFE] md:h-[200px] h-[100px] md:w-full"></div>
+
+    <!-- footer for wide screens -->
+    <footer
+      class="bg-[#051F36] md:h-[500px] md:w-full relative md:pt-24 md:pl-[] md:block hidden"
+    >
+      <div class="md:h-[300px] md:w-[80%] md:flex md:flex-row md:ml-[10%]">
+        <div class="md:h-full md:w-[30%] relative"
+        data-aos="fade-right" data-aos-duration="1200" data-aos-easing="5ease-in-out">
+          <img
+            src="images/Frame 1060.png"
+            class="md:w-[150px] md:mt-20"
+            alt="logo"
+          />
+          <p class="md:text-sm md:mt-4 capitalize text-gray-400">
+            dedicated to providing the highest quality <br />
+            healthcare services to our community.
+          </p>
+
+          <h3 class="text-white md:mt-10">
+            Email: <span class="text-gray-400">EdesCare@gmail.com</span>
+          </h3>
+          <h3 class="capitalize md:mt-4 text-white">
+            Follow us on social media
+            <span class="">
+              <i
+                class="fa-brands fa-x-twitter md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+              ></i>
+              <i
+                class="fa-brands fa-facebook md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+              ></i>
+              <i
+                class="fa-brands fa-instagram md:mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+              ></i>
+            </span>
+          </h3>
+        </div>
+        <div class="md:h-full md:w-[15%] relative"
+        data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Company
+          </h3>
+          <ul class="text-gray-400">
+            <li class=""><a href="#" class="hover:text-white">Home</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">About Us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Services</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Our Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:h-full md:w-[15%] relative"
+        data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Important
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white">Our Process</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Appointment</a>
+            </li>
+            <li class="mt-4"><a href="#" class="hover:text-white">FAQ</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:h-full md:w-[15%] relative"
+        data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h3 class="md:mt-20 text-white font-semibold text-lg md:mb-4">
+            Quick Link
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              <a href="#" class="hover:text-white capitalize">Why choose us</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Doctors</a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white capitalize"
+                >news and articles</a
+              >
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:h-full md:w-[25%] relative"
+        data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h3
+            class="md:mt-20 text-white font-semibold text-lg md:mb-4 capitalize"
+          >
+            Official info
+          </h3>
+          <ul class="text-gray-400">
+            <li class="">
+              Address : 1,Akpajo <br />
+              Abia State, Nigeria
+            </li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-white">Email: EdesCare@gmail.com</a>
+            </li>
+            <li class="mt-4">Phone : +234 913 0584 871</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="w-[80%] ml-[10%] border-2 border-gray-600 mt-12" />
+      <div class="w-[80%] h-[50px] ml-[10%] md:flex flex-row justify-between">
+        <h3 class="text-gray-400">2023 All Right Reserved</h3>
+        <h3 class="text-gray-400">Website Developed By Nonsoemmy</h3>
+        <h3 class="text-gray-400">Terms & conditions</h3>
+      </div>
+
+      <div
+        class="bg-[#1D8AEC] md:w-[70%] md:h-[200px] absolute md:left-[15%] md:right-[15%] rounded-lg md:top-[-20%] flex flex-row"
+        data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
+      >
+        <div class="md:h-full md:w-1/2 md:pl-[10%] md:pt-12">
+          <h3 class="capitalize text-gray-200 text-left">
+            newsletter subscribe
+          </h3>
+          <h1 class="text-white font-semibold text-[34px] leading-[40px]">
+            Subscribe For Exclusive <br />
+            Health Updates!
+          </h1>
+        </div>
+        <div class="md:h-full md:w-1/2 flex items-center justify-center">
+          <form action="" class="bg-white w-[70%] h-[48px] rounded-sm">
+            <input
+              type="email"
+              class="h-full w-[60%] capitalize text-gray-400 rounded-md outline-[0] border-[0]"
+              placeholder="enter your email"
+            />
+            <button class="md:py-1 rounded-sm md:px-7 md:ml-1 bg-[#1D8AEC]">
+              <a
+                href="appointment.html"
+                class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                >Subscribe</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer for small screens -->
+    <footer class="md:hidden block h-[1000px] w-full bg-[#051F36]">
+      <div class="w-full h-full relative pt-[170px]">
+        <div
+          class="absolute w-[70%] h-[300px] bg-[#1D8AEC] ml-[15%] rounded-md top-[-15%] flex flex-col"
+          data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
+        >
+          <div class="w-full h-1/2 flex flex-col items-center justify-center">
+            <h3 class="text-white text-center">Newsletter Subscribe</h3>
+            <h1 class="text-white text-center text-2xl">
+              Subscribe For Exclusive <br />
+              Health Updates!
+            </h1>
+          </div>
+          <div class="w-full h-1/2">
+            <form
+              action=""
+              class="bg-white w-[70%] h-[90px] rounded-sm flex flex-col ml-[15%]"
+            >
+              <input
+                type="email"
+                class="h-1/2 w-full capitalize text-gray-400 rounded-md outline-[0] border-[0] pl-7"
+                placeholder="enter your email"
+              />
+              <button class="py-2 rounded-sm mx-6 mb-3 px-2 bg-[#1D8AEC]">
+                <a
+                  href="appointment.html"
+                  class="text-white text-sm tracking-wider capitalize hover:text-black duration-300"
+                  >Subscribe</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="h-[700px] w-full flex flex-col overflow-hidden">
+          <div class="h-[30%] w-full px-[10%] relative"
+          data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
+            <img src="images/Frame 1060.png" class="w-[150px]" alt="logo" />
+            <h2 class="text-left text-gray-400 capitalize mt-3">
+              dedicated to providing the highest <br />
+              quality healthcare services to our community.
+            </h2>
+            <h2 class="mt-5 text-gray-400">
+              <span class="text-white">Email</span> : EdesCare@gmail.com
+            </h2>
+            <h2 class="text-white">
+              Follow on Social Media:<span class="">
+                <i
+                  class="fa-brands fa-x-twitter mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-black duration-300 ease-in-out"
+                ></i>
+                <i
+                  class="fa-brands fa-facebook mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm"
+                ></i>
+                <i
+                  class="fa-brands fa-instagram mx-1 rounded py-2 px-2 bg-[#1D8AEC] cursor-pointer text-sm hover:text-pink-400 duration-300 ease-in-out"
+                ></i>
+              </span>
+            </h2>
+          </div>
+          <div class="h-[30%] w-full flex flex-row pt-5">
+            <div class="h-full w-1/2 pl-[10%] relative"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+              <h2 class="my-2 text-white">Company</h2>
+              <ul class="text-gray-400 capitalize">
+                <li class="my-2">home</li>
+                <li class="my-2">about us</li>
+                <li class="my-2">section</li>
+                <li class="my-2">our team</li>
+              </ul>
+            </div>
+            <div class="h-full w-1/2 pl-[5%] relative"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+              <h2 class="my-2 text-white text-left">Important</h2>
+              <ul class="text-gray-400 capitalize text-left">
+                <li class="my-2">our process</li>
+                <li class="my-2">appointment</li>
+                <li class="my-2">FAQ</li>
+                <li class="my-2">privacy policy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="h-[30%] w-full flex flex-row">
+            <div class="h-full w-1/2 pl-[10%] relative"
+            data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+              <h2 class="my-2 text-white">Quick Links</h2>
+              <ul class="text-gray-400 capitalize">
+                <li class="my-2">why contact us</li>
+                <li class="my-2">doctors</li>
+                <li class="my-2">news & articles</li>
+                <li class="my-2">subscribe</li>
+              </ul>
+            </div>
+            <div class="h-full w-1/2 pl-[5%] relative"
+            data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+              <h2 class="my-2 text-white text-left">Official info</h2>
+              <ul class="text-gray-400 capitalize text-left">
+                <li class="my-2">
+                  Address : 12,sancah <br />
+                  close Abuja,Nigeria
+                </li>
+                <li class="my-2">Email : EdesCare@gmail.com</li>
+                <li class="my-2">Phone : +234 923 0584 871</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="w-[80%] ml-[10%]" />
+        <div class="h-[10%] w-[80%] ml-[10%] flex flex-row justify-between pt-3 relative"
+        data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+          <h3 class="text-gray-400 text-sm">2023 All Right Reserved</h3>
+          <h3 class="text-gray-400 text-sm text-center">Developed By Nonsoemmy</h3>
+          <h3 class="text-gray-400 text-sm text-right">Terms & conditions</h3>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>   
+        AOS.init(); 
+     </script>
+  </body>
+</html>
