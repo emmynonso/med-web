@@ -455,21 +455,58 @@
                     data-aos="fade-down"
                     data-aos-duration="1200"
                     data-aos-easing="ease-in-out">Make An Appointment</h1>
-                    <form action="" class="" aria-required="true"
+
+                    <!-- form -->
+                        <form onsubmit="return validateForm()" method="post" name="RegForm"
                     data-aos="fade-left"
                     data-aos-duration="1200"
                     data-aos-easing="ease-in-out">
-                        <input type="text" id="name" placeholder="Name" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
-                        <input type="email" id="email" placeholder="Email" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
-                        <input type="tel" id="number" placeholder="Phone" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md">
-                        <button class="bg-[#1D8AEC] rounded-md py-2 w-[80%] mx-[10%] my-3
-                         hover:bg-[#1d8becaf] duration-300 ease-in-out"><a href="#" 
-                         class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</a></button>
-                    </form>
+                        <input type="text" name="Name" placeholder="Name" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md" required>
+                        <input type="email" name="Email" placeholder="Email" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md" required>
+                        <input type="tel" name="Phone" placeholder="Phone" class="w-[80%] mx-[10%] my-3 outline-0 border-0 rounded-md" pattern="^\d{11}$" required>
+                        <button value="submit" type="submit" class="bg-[#1D8AEC] rounded-md py-2 w-[80%] mx-[10%] my-3
+                         hover:bg-[#1d8becaf] duration-300 ease-in-out"><p class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</p></button>
+                         </form>
+                         <!-- script for form -->
+    <script>
+        function validateForm() {
+          // Get the form elements
+          let name = document.forms["RegForm"]["Name"];
+          let email = document.forms["RegForm"]["Email"];
+          let phone = document.forms["RegForm"]["Phone"];
+    
+          // Check if the name field is empty
+          if (name.value == "") {
+            alert("Oga Enter ur name.");
+            name.focus();
+            return false;
+          }
+    
+          // Check if the email field is valid
+          if (email.value == "" || !email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            alert("Please enter a valid email address.");
+            email.focus();
+            return false;
+          }
+                                                         
+          // Check if the phone field is valid
+          if (phone.value == "" || !phone.value.match(/^\d{10}$/)) {
+            alert("Please enter a valid phone number.");
+            phone.focus();
+            return false;
+          }
+    
+          // If all the validations are passed, return true
+          return true;
+        }
+      </script>
+                        
                 </div>
             </div>
         </div>
     </main>
+
+    
     <!-- big screen end -->
 
     <!-- small screen main -->
@@ -505,26 +542,60 @@
                     data-aos-easing="ease-in-out" alt="doctor and patient">
                 <h1 class="text-[#1D8AEC] text-center font-semibold text-lg"
                     >Make An Appointment</h1>
-                <form action="" class="" aria-required="true">
-                    <input type="text" id="name" placeholder="Name" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                <form name="RegForm" onsubmit="return validateForm()" method="post">
+                    <input type="text" name="Name"  placeholder="Name" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md" required
                     data-aos="fade-up"
                     data-aos-duration="1200"
                     data-aos-easing="ease-in-out">
-                    <input type="email" id="email" placeholder="Email" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                    <input type="email" name="Email"  placeholder="Email" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md" required
                     data-aos="fade-right"
                     data-aos-duration="1200"
                     data-aos-easing="ease-in-out">
-                    <input type="tel" id="number" placeholder="Phone" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md"
+                    <input type="tel" name="Phone" pattern="^\d{11}$"  placeholder="Phone" class="mx-[15%] w-[70%] my-2 border-0 outline-0 rounded-md shadow-md" required
                     data-aos="fade-down"
                     data-aos-duration="1200"
                     data-aos-easing="ease-in-out">
-                    <button class="bg-[#1D8AEC] rounded-md py-2 w-[70%] mx-[15%] my-2
-                         hover:bg-[#1d8becaf] duration-300 ease-in-out"
+                    <button class="bg-[#1D8AEC] rounded-md py-2 w-[70%] mx-[15%] my-2 
+                         hover:bg-[#1d8becaf] duration-300 ease-in-out" type="submit" value="Submit"
                          data-aos="fade-left"
                          data-aos-duration="1200"
-                         data-aos-easing="ease-in-out"><a href="#" 
-                         class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</a></button>
+                         data-aos-easing="ease-in-out"><p class="text-white hover:text-black duration-300 ease-in-out">Book Appointment</p></button>
                 </form>
+
+                <script>
+                    function validateForm() {
+                      // Get the form elements
+                      let name = document.forms["RegForm"]["Name"];
+                      let email = document.forms["RegForm"]["Email"];
+                      let phone = document.forms["RegForm"]["Phone"];
+                
+                      // Check if the name field is empty
+                      if (name.value == "") {
+                        alert("Please enter your name.");
+                        name.focus();
+                        return false;
+                      }
+                
+                      // Check if the email field is valid
+                      if (email.value == "" || !email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                        alert("Please enter a valid email address.");
+                        email.focus();
+                        return false;
+                      }
+                                                                     
+                      // Check if the phone field is valid
+                      if (phone.value == "" || !phone.value.match(/^\d{11}$/)) {
+                        alert("Please enter a valid phone number.");
+                        phone.focus();
+                        return false;
+                      }
+                
+                      // If all the validations are passed, return true
+                      return true;
+                    }
+                  </script>
+                
+                
             </div>
         </div>
 
